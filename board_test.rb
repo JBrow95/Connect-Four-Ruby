@@ -8,6 +8,7 @@ class TestUntitled < Test::Unit::TestCase
     end
 
     def test_if_board_array_length_is_35
+        board = Board.new
         assert_equal board.b.length, 35
     end
 end
