@@ -11,4 +11,16 @@ class TestUntitled < Test::Unit::TestCase
         board = Board.new
         assert_equal board.b.length, 35
     end
+
+    def test_if_board_has_36_indexes
+        board = Board.new
+        board.b.each_with_index do |v, i|
+            if v[36] == 35
+                return true
+            else
+                return false
+            end
+        end
+        assert_equal v, true
+    end
 end
