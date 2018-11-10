@@ -7,20 +7,14 @@ class TestUntitled < Test::Unit::TestCase
         assert_equal 1, 1
     end
 
-    def test_if_board_array_length_is_35
+    def test_if_board_array_length_is_42
         board = Board.new
-        assert_equal board.b.length, 35
+        assert_equal board.b.length, 42
     end
 
-    def test_if_board_has_36_indexes
+    def test_if_board_has_41_indexes
         board = Board.new
-        board.b.each_with_index do |v, i|
-            if v[36] == 35
-                return true
-            else
-                return false
-            end
-        end
-        assert_equal v, true
+        print board.b[41]
+        assert_equal board.b[41], 42
     end
 end
