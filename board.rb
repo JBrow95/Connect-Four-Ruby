@@ -4,6 +4,6 @@ class Board
     attr_accessor :b
 
     def initialize
-        @b = [*1..35]
+        @b = [*1..42]
     end
 end
