@@ -5,6 +5,7 @@ class Game
         @game_baord = Board.new
     end
 
+
     def play
         @game_baord.draw_board
     end
