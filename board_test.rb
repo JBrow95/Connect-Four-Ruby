@@ -17,4 +17,9 @@ class TestUntitled < Test::Unit::TestCase
         print board.b[41]
         assert_equal board.b[41], 42
     end
+
+    def test_if_position_equals_index
+        board = Board.new
+        assert_equal board.draw_board[2], 3
+    end
 end
