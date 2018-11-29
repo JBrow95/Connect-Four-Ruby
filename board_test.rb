@@ -1,5 +1,6 @@
 require 'test/unit'
 require_relative 'board.rb'
+require_relative 'game.rb'
 
 class TestUntitled < Test::Unit::TestCase
 
@@ -21,5 +22,12 @@ class TestUntitled < Test::Unit::TestCase
     def test_if_position_equals_index
         board = Board.new
         assert_equal board.draw_board[2], 3
+    end
+
+    def test_if_update_board_reuturns_updated_board
+        board = Board.new
+        board.update_board(1, "B")
+        
+        assert_equal board.b[0], "B"
     end
 end
