@@ -37,5 +37,7 @@ class TestUntitled < Test::Unit::TestCase
         board.update_board(1, "B")
         
         assert_equal board.vacant_spaces(1), false
+
+        assert_equal board.update_board(1, "B"), false
     end
 end
