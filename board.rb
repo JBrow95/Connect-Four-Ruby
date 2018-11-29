@@ -15,4 +15,18 @@ class Board
 			end
 		end
     end
+
+    def update_board(choice, char)
+        moves = vacant_spaces(choice)
+        if moves == true
+            @b[choice -1] = char
+            return draw_board
+        else
+            return false
+        end
+    end
+
+    def vacant_spaces(choice)
+        @b.include?(choice)
+    end
 end
