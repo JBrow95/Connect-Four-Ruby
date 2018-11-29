@@ -27,7 +27,15 @@ class TestUntitled < Test::Unit::TestCase
     def test_if_update_board_reuturns_updated_board
         board = Board.new
         board.update_board(1, "B")
-        
+        board.update_board(2, "B")
         assert_equal board.b[0], "B"
+        assert_equal board.b[1], "B"
+    end
+
+    def test_if_space_is_not_available_return_false
+        board = Board.new
+        board.update_board(1, "B")
+        
+        assert_equal board.vacant_spaces(1), false
     end
 end
